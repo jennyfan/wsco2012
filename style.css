@@ -1,0 +1,556 @@
+/*
+Site: Wharton Supply Chain Conference
+URI: http://whartonsupplychainconference.com
+Author: Jenny Fan
+Author URI: http://jennyfan.com
+Version: 1.0
+Description: For use by Wharton Supply Chain Organization (www.whartonsupplychain.org) only.
+
+*/
+
+
+* {
+	margin: 0;
+	zoom: 1;
+}
+html, body {
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background-image: url('images/bg.gif');
+}
+#wrapper {
+	height: 100%;
+	min-height: 100%;
+}
+#main {
+	background-image: url('images/main.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	height: 100%;
+}
+#welcome, #panels, #agenda, #team {
+	height: 100%;
+	display: block;
+	float:center;
+	clear: both;
+	z-index: 0;
+	padding: 40px 60px;
+}
+#sponsors, #tickets {
+	display: block;
+	float:center;
+	clear: both;
+	z-index: 0;
+	padding: 40px 60px;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Helvetica Neue LT';
+    src: url('fonts/helveticaneueltstd-cn-webfont.eot');
+    src: url('fonts/helveticaneueltstd-cn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneueltstd-cn-webfont.woff') format('woff'),
+         url('fonts/helveticaneueltstd-cn-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneueltstd-cn-webfont.svg#HelveticaNeueLTStdCnRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT';
+    src: url('fonts/helveticaneueltstd-cno-webfont.eot');
+    src: url('helveticaneueltstd-cno-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneueltstd-cno-webfont.woff') format('woff'),
+         url('fonts/helveticaneueltstd-cno-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneueltstd-cno-webfont.svg#HelveticaNeueLTStdCnItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT';
+    src: url('fonts/helveticaneueltstd-mdcn-webfont.eot');
+    src: url('fonts/helveticaneueltstd-mdcn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneueltstd-mdcn-webfont.woff') format('woff'),
+         url('fonts/helveticaneueltstd-mdcn-webfont.ttf') format('truetype'),
+         url('fonts/helveticaneueltstd-mdcn-webfont.svg#HelveticaNeueLTStdMedCnRg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* Text */
+h1 {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 40pt;
+	line-height: 1em;
+	color: #ff056f;
+	-webkit-font-smoothing: antialiased;
+	border-bottom: 1px dotted #ff056f;
+	margin: 0;
+}
+h2 {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 15pt;
+	line-height: 1em;
+	color: #253662;
+	margin: 10px 0 0;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+h3 {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 19pt;
+	line-height: 1.25em;
+	color: #ff056f;
+	margin: 0 0 15px;
+}
+h3.short {
+	margin: 0;
+}
+p, li {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	line-height: 1.2em;
+	color: #253662;
+	text-align: justify;
+	margin: 10px 0;
+	font-size: 14pt;
+}
+p, li, label {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	line-height: 1.2em;
+	color: #253662;
+	text-align: justify;
+	margin: 5px 0;
+	padding: 0 5px;
+	font-size: 14pt;
+}
+li {
+	text-align: left;
+}
+p b, li b {
+	color: #ff056f;
+}
+input, select {
+	background-color: #ccc;
+	border: 1px solid #333;
+	font-size: 14pt;
+	border-radius: 5px;
+}
+ul.ss-choices {
+	list-style: none;
+}
+li.ss-choice-item {
+	list-style: none;
+}
+input.ss-submit {
+	padding: 2px 30px;
+	background-color: #FF056F;
+	border-radius: 2px;
+}
+input.ss-submit:hover {
+	padding: 2px 30px;
+	background-color: #B2004C;
+	border-radius: 2px;
+}
+
+/* Text & Specific Styles */
+#welcome p {
+	text-indent: 20px;
+}
+#welcome p.sign {
+	text-indent: 0px;
+	margin-left: 20px;
+}
+#welcome ul {
+	list-style-type: none;
+	margin: 20px auto 0 20px;
+	padding: 0;
+}
+#welcome ul li {
+	margin: 5px 0;
+}
+#agenda p {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 19pt;
+	line-height: 1.25em;
+	color: #253662;
+	margin: 10px 0 15px;
+}
+#agenda ul {
+	margin: 20px auto;
+}
+#agenda li {
+	list-style: none;
+	font-size: 15pt;
+	margin: 10px 0;
+}
+
+table {
+	margin: 15px auto;
+	float: center;
+}
+td {
+	padding: 5px 0;
+}
+td h2 {
+	margin: 0;
+}
+td p {
+	margin: 0;
+	font-size: 12pt;
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	line-height: 1.2em;
+	color: #253662;
+	text-align: left;
+}
+
+
+a:link, a:visited {
+	color: #b2004c;
+}
+a:hover, a:active {
+	color: #ff056f;
+}
+
+
+
+/* Menu Header */
+#nav {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	clear: both;
+	float: right;
+	z-index: 10;
+	border-top: 10px solid #3e5286;
+}
+#nav ul {
+	padding: 0 20px 0 0;
+	margin: 0px;
+	list-style: none;
+	float: right;
+}
+#nav li {
+	float: left;
+	width: 120px;
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	background-image: url('images/bg.gif');
+}
+#nav li a {
+	text-decoration: none;
+	display: block;
+	width: 120px;
+	color: #3e5286;
+	line-height: 2em;
+	text-transform: uppercase;
+}
+#nav li a:hover {
+	color: #ff056f;
+	display: block;
+	width: 120px;
+	line-height: 2em;
+	-o-transition: .5s ease;
+	-ms-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+}
+#nav li.tickets a {
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 2em;
+	background-color: #ff056f;
+	-moz-border-radius:0 0 10px 10px;
+	-khtml-border-radius:0 0 10px 10px;
+	-webkit-border-radius:0 0 10px 10px;
+	border-radius:0 0 10px 10px;
+}
+#nav li.tickets a:hover {
+	color: #fff;
+	background-color: #d7005b;
+	line-height: 3em;
+}
+
+/* Main Page */
+#main {
+	background-image: url('images/main.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: cover;
+	height: 100%;
+}
+#header {
+	float: right;
+	width: 100%;
+	height: 20px;
+}
+#footer {
+	width: 100%;
+	height: 100px;
+	/* background-color: rgba(62,82,134,0.8); */
+	background-color: rgba(255,255,255,0.8);
+	position: absolute;
+	bottom: 0px;
+	z-index: 9;
+	padding: 0;
+	text-align: center;
+}
+#footer p {
+	color: #3e5286;
+	font-size: 13pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	padding: 5px;
+	margin: 0;
+}
+#footer ul {
+	list-style: none;
+	float: center;
+	margin: 0;
+}
+#footer li {
+	float: left;
+	display: inline;
+	padding: 0 10px;
+}
+#footer h2 {
+	text-align: center;
+}
+img.logo {
+	height: 40px;
+}
+
+
+/* Scroll to top */
+#go2top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+#go2top a {
+	text-decoration: none;
+	color: #3e5286;
+	font-family: 'Helvetica Neue LT', Helvetica, Verdana, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 11pt;
+	padding: 10px;
+}
+#go2top a:hover {
+	background-color: #3e5286; 
+	color: #fff;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-o-transition: .5s ease;
+	-ms-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-webkit-transition: .5s ease;
+	transition: .5s ease;
+}
+
+/* Bottom */
+
+#bottom {
+	display: block;
+	float: center;
+	height: 20px;
+	clear: both;
+}
+#bottom p {
+	font-size: 10pt;
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	color: #253662;
+	float: center;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*** FROM BOOTSTRAP ***/
+
+.row {
+  /* margin-left: -20px; */
+  *zoom: 1;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="span"] {
+  float: left;
+  margin-left: 20px;
+}
+.span12 {
+  width: 940px;
+}
+.span6 {
+  width: 460px;
+}
+.span4 {
+  width: 300px;
+}
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+
+.row-fluid:before,
+.row-fluid:after {
+  display: table;
+  content: "";
+}
+
+.row-fluid:after {
+  clear: both;
+}
+
+.row-fluid [class*="span"] {
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 28px;
+  margin-left: 2.127659574%;
+  *margin-left: 2.0744680846382977%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+.row-fluid .span12 {
+  width: 99.99999998999999%;
+  *width: 99.94680850063828%;
+}
+
+.row-fluid .span6 {
+  width: 48.93617020799999%;
+  *width: 48.88297871863829%;
+}
+
+.row-fluid .span4 {
+  width: 31.914893614%;
+  *width: 31.8617021246383%;
+}
+
+table .span12 {
+  float: none;
+  width: 924px;
+  margin-left: 0;
+}
+
+
+/*** MODAL WINDOW ***/
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:fixed;
+  left:0;
+  top:0;
+  width:850px;
+  margin: 10px 0;
+  display:none;
+  z-index:9999;
+  padding:10px;
+}
+
+#boxes .closebutton {
+	position: relative;
+	top: 0;
+	float: right;
+}
+#boxes .panelist {
+  width:90%; 
+  margin: 10px auto;
+  padding:10px;
+  background-color:#ffffff;
+}
+#boxes .registration {
+  width:60%; 
+  margin: 10px auto;
+  padding:10px;
+  background-color:#ffffff;
+}
+#boxes .window h1 {
+	font-size: 25pt;
+}
+#boxes .window h2 {
+	margin: 0;
+}
+#boxes .window h3 {
+	margin: 0;
+	font-size: 15pt;
+}
+#boxes .window img {
+	padding: 0 5px 5px 0;
+}
+#boxes .window p {
+	font-size: 11pt;
+}
+
+#registerbutton {
+	position: absolute;
+	right: 30px;
+	top: 80px;
+}
+#registerbutton a {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 15pt;
+	font-weight: bold;
+	background-color: #FF056F;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 5px 10px;
+}
+#registerbutton a:hover {	
+	background-color: #B2004C;
+	color: #fff;
+}
+a.register {
+	font-family: 'Helvetica Neue LT', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 20pt;
+	font-weight: bold;
+	background-color: #FF056F;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 20px;
+}
+a.register:hover {	
+	background-color: #B2004C;
+	color: #fff;
+}
